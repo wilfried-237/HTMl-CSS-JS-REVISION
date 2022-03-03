@@ -7,6 +7,53 @@
     <title>HTML CSS & JS</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){    
+            var btn1 = document.getElementById('btn1');
+
+            var img1 = document.getElementById('img1');
+
+
+            function click1() {
+                if (img1.style.display == 'none'){
+                    img1.style.display = 'inline';
+                    }else{
+                    img1.style.display = 'none';
+                }
+            }
+            btn1.onclick = click1
+        
+            function display(){
+                var text = event.target.innerText;
+                console.log(text);
+            }
+            var ul = document.getElementById('ul');
+            ul.addEventListener('click',display,false);
+
+            var uk = document.getElementById('uk');
+        var london = document.getElementById('london');
+
+        function uk(){
+            console.log('welcome to uk');
+        }
+
+        function london(){
+            console.log('welcome to london');
+        }
+
+        uk.addEventListener('click',uk,false);
+        london.addEventListener('click',london,false);
+
+
+
+
+
+
+
+
+
+    }
+    </script>
 </head>
 <body>
     <h1>HEADER</h1>
@@ -25,24 +72,12 @@
     </ul>
     <h2>SECOND HEADER</h2>
     <P id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus deleniti assumenda, distinctio consequuntur harum officia, eum delectus omnis sunt modi molestiae temporibus incidunt magnam tempora officiis. Voluptatem, dolorum quae!</P>
-    <div id="parent">
-        <div id="child">
+    <div id="uk">
+        <h1>UK</h1>
+        <div id="london">
             DELETE ME
         </div>
     </div>
-    <script type="text/javascript">
-        var btn1 = document.getElementById('btn1');
-
-        var img1 = document.getElementById('img1');
-
-
-        btn1.onclick = function() {
-            if (img1.style.display == 'none'){
-                img1.style.display = 'inline';
-            }else{
-                img1.style.display = 'none';
-            }
-        }
-    </script>
+    
 </body>
 </html>
