@@ -31,28 +31,29 @@
             ul.addEventListener('click',display,false);
 
             var uk = document.getElementById('uk');
-        var london = document.getElementById('london');
+            var london = document.getElementById('london');
 
-        function uk(){
-            console.log('welcome to uk');
+            function uk(){
+                console.log('welcome to uk');
+            }
+
+            function london(){
+                console.log('welcome to london');
+                event.stopPropagation();
+            }
+
+            uk.addEventListener('click',uk,false);
+            london.addEventListener('click',london,false);
+
+
+
+
+
+
+
+
+
         }
-
-        function london(){
-            console.log('welcome to london');
-        }
-
-        uk.addEventListener('click',uk,false);
-        london.addEventListener('click',london,false);
-
-
-
-
-
-
-
-
-
-    }
     </script>
 </head>
 <body>
